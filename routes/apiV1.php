@@ -19,6 +19,7 @@ Route::middleware(['auth:api', 'adminOnly'])->group(function () {
 
 Route::middleware(['auth:api'])->group(function () {
     Route::resource('orders', 'OrderController')->only(['index', 'store', 'show']);
+    Route::resource('deliveries', 'DeliveriesController')->only(['index']);
 });
 
 Route::resource('meals', 'MealsController')->only(['index', 'show']);

@@ -14,4 +14,10 @@ class Meal extends Model
         'price' => 'integer'
     ];
 
+    public function reduceUnits()
+    {
+        $this->units = $this->units--;
+        $this->save();
+    }
+
 }
