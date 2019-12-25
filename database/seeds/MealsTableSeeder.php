@@ -16,10 +16,10 @@ class MealsTableSeeder extends Seeder
         DB::table('meals')->delete();
 
         $food = [
-            'Cheese Pizza', 'Hamburger', 'Cheeseburger', 'Bacon Burger', 'Bacon Cheeseburger',
-            'Little Hamburger', 'Little Cheeseburger', 'Little Bacon Burger', 'Little Bacon Cheeseburger',
+            'Cheese Pizza', 'Hamburger', 'Cheeseburger', 'Bacon Burger',
+            'Little Hamburger', 'Little Cheeseburger', 'Little Bacon Burger',
             'Veggie Sandwich', 'Cheese Veggie Sandwich', 'Grilled Cheese',
-            'Cheese Dog', 'Bacon Dog', 'Bacon Cheese Dog', 'Pasta'
+            'Cheese Dog', 'Bacon Dog', 'Pasta'
         ];
 
         $faker = \Faker\Factory::create();
@@ -32,9 +32,6 @@ class MealsTableSeeder extends Seeder
                 'price' => $faker->numberBetween(500, 1000)
             ]);
         }
-
-//        factory(Meal::class, 17)->create();
-
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }

@@ -14,6 +14,11 @@ class Meal extends Model
         'price' => 'integer'
     ];
 
+    public function scopeAvailable($query)
+    {
+        return $query->where('units', '>', 0);
+    }
+
     public function reduceUnits()
     {
         $this->units = $this->units--;

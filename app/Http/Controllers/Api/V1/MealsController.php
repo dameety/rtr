@@ -8,13 +8,15 @@ use App\Http\Requests\MealUpdateRequest;
 use App\Http\Resources\MealCollection;
 use App\Http\Resources\MealResource;
 use App\Meal;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class MealsController extends Controller
 {
     public function index()
     {
-        $meals = Meal::where('units', '>', 0)->paginate(10);
+        $meals = Cache::rememberForever('all_meals', function() {
+            return Meal::available()->paginate(10);
+        });
 
         return $this->sendResponse([
             'meals' => new MealCollection($meals)
