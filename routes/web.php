@@ -1,7 +1,7 @@
 <?php
 
 
-Route::get('auth/{any}', 'AuthSpaController')->where('any', '.*');
+Route::get('auth/{any}', 'FrontSpaController')->where('any', '.*');
 
 
 Route::prefix('admin')->group(function(){
