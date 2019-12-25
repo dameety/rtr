@@ -25,13 +25,13 @@ class Order extends Model
         if($user->isAdmin()) {
             return self::with(['customer', 'driver'])->paginate(10);
         }
-
-        if($user->isDriver()) {
-            return self::where('driver_id', $user->id)
-                ->with(['customer', 'driver'])->paginate(10);
-        }
-
         return self::where('user_id', $user->id)
                 ->with(['customer', 'driver'])->paginate(10);
+    }
+
+    public static function deliveries($user)
+    {
+        return self::where('driver_id', $user->id)
+                    ->with(['customer', 'driver'])->paginate(10);
     }
 }
