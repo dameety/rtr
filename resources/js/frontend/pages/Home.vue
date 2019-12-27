@@ -178,7 +178,6 @@ export default {
 
     updateCart(meal) {
 
-      console.log(this.$store.getters.userIsAuthenticated);
 
       if (!this.$store.getters.userIsAuthenticated) {
         this.$router.push({ name: "login" });
@@ -187,7 +186,7 @@ export default {
 
       if(meal.units > 0) {
 
-        const cartItem = this.cart.find(item => item.id === meal.id);
+        const cartItem = this.cart.find(item => item.meal_id === meal.id);
 
         if(!cartItem) {
           this.cart.push({
