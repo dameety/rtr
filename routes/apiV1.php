@@ -33,3 +33,5 @@ Route::fallback(function(){
         'message' => 'Api endpoint not found.'
     ], \Illuminate\Http\Response::HTTP_NOT_FOUND);
 });
+
+
