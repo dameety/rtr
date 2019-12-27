@@ -3,6 +3,7 @@
 use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schema;
 
 class UsersTableSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        Schema::disableForeignKeyConstraints();
 
         DB::table('users')->delete();
 
@@ -34,6 +35,7 @@ class UsersTableSeeder extends Seeder
             'role' => \App\Enums\UserRole::CUSTOMER
         ]);
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
+        Schema::enableForeignKeyConstraints();
     }
 }

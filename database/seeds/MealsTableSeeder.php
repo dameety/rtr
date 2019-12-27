@@ -2,6 +2,7 @@
 
 use App\Meal;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class MealsTableSeeder extends Seeder
 {
@@ -12,7 +13,8 @@ class MealsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        Schema::disableForeignKeyConstraints();
+
         DB::table('meals')->delete();
 
         $food = [
@@ -33,6 +35,6 @@ class MealsTableSeeder extends Seeder
             ]);
         }
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        Schema::enableForeignKeyConstraints();
     }
 }
