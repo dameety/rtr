@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use App\Meal;
 use App\Observers\MealObserver;
-use Illuminate\Support\Facades\URL;
+use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,13 +22,16 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      *
+     * @param UrlGenerator $url
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
-        if (env('APP_ENV') === 'production') {
-            URL::forceSchema('https');
+        if(\App::environment('production')) {
+            $url->forceScheme('https');
         }
+
         Meal::observe(MealObserver::class);
+
     }
 }
