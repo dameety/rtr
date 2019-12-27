@@ -7,7 +7,7 @@
                     <h2 class="page-title">Orders</h2>
 
                     <b-button class="btn-primary" @click.prevnet="makeNewOrder()">
-                        <i class="fas fa-trash "></i> Make New Order
+                         Make New Order
                     </b-button>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                                 :to="{name:'orders.edit', params: {id: scope.item.id}}"
                                 v-if="$store.getters.userIsAdmin">
                                 <span>
-                                  <i class="fas fa-trash"></i> Edit
+                                  Edit
                                 </span>
                             </b-dropdown-item>
 
@@ -59,7 +59,7 @@
                                 :to="{name:'orders.show', params: {id: scope.item.id}}"
                                 v-if="!$store.getters.userIsAdmin">
                                 <span>
-                                  <i class="fas fa-trash "></i> View
+                                   View
                                 </span>
                             </b-dropdown-item>
 

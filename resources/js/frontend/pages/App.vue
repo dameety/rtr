@@ -5,7 +5,7 @@
           <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
               <div class="container">
                   <a class="navbar-brand mr-lg-5" href="#">
-                      <img src="/front/img/brand/white.png" alt="brand">
+                      Restaurant
                   </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -15,7 +15,7 @@
                           <div class="row">
                               <div class="col-6 collapse-brand">
                                   <a href="#">
-                                      <img src="front/img/brand/blue.png" alt="brand">
+                                      Restaurant
                                   </a>
                               </div>
                               <div class="col-6 collapse-close">

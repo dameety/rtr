@@ -8,7 +8,7 @@
                     <h2 class="page-title">Inventory</h2>
 
                     <b-button :to="{name: 'inventory.create' }">
-                        <i class="fas fa-trash "></i> Create New
+                        Create New
                     </b-button>
                 </div>
 
@@ -50,7 +50,7 @@
                                 :dusk="`edit-meal-${scope.item.id}`"
                                 :to="{name:'inventory.edit', params: {id: scope.item.id}}">
                                 <span>
-                                  <i class="fas fa-trash "></i> Edit
+                                  Edit
                                 </span>
                             </b-dropdown-item>
 

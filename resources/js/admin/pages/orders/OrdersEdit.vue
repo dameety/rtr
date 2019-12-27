@@ -140,7 +140,7 @@
                                         <b-button
                                             dusk="update-order"
                                             @click.prevnet="updateOrder()">
-                                            <i class="fas fa-trash "></i> Update
+                                             Update
                                         </b-button>
                                     </div>
                                 </div>

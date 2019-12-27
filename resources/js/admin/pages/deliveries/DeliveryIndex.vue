@@ -34,7 +34,7 @@
                             <b-dropdown-item
                                 :to="{name:'orders.show', params: {id: scope.item.id}}">
                                 <span>
-                                  <i class="fas fa-trash "></i> View
+                                    View
                                 </span>
                             </b-dropdown-item>
 
