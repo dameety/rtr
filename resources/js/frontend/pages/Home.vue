@@ -18,7 +18,9 @@
           <div class="col px-0">
             <div class="row">
               <div class="col-lg-6">
-                <h1 class="display-3  text-white">A beautiful Design System<span>completed with examples</span></h1>
+                <h1 class="display-3  text-white">
+                  Welcome, are you ready to place your order?
+                </h1>
               </div>
             </div>
           </div>
@@ -72,7 +74,7 @@
                     <div class="card-footer text-muted">
                       <div class="form-group">
                         <label for="address">Address</label>
-                        <textarea class="form-control" id="address" rows="2" v-model="address"></textarea>
+                        <textarea class="form-control" name="address" id="address" rows="2" v-model="address"></textarea>
                       </div>
 
                       <loading-button
@@ -176,6 +178,8 @@ export default {
 
     updateCart(meal) {
 
+      console.log(this.$store.getters.userIsAuthenticated);
+
       if (!this.$store.getters.userIsAuthenticated) {
         this.$router.push({ name: "login" });
         return;
@@ -212,6 +216,5 @@ export default {
   .food_menu {
     padding-top: 100px;
   }
-
 
 </style>

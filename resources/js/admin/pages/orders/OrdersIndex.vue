@@ -32,10 +32,11 @@
                             class="dropdown-ellipses">
 
                             <template slot="button-content">
-                                <i class="text-muted fas fa-ellipsis-v"></i>
+                                <i class="text-muted fas fa-ellipsis-v" dusk="action-dropdown"></i>
                             </template>
 
                             <b-dropdown-item
+                                :dusk="`delete-order-${scope.item.id}`"
                                 @click="removeItem(scope.item)"
                                 v-if="$store.getters.userIsAdmin">
                                 <span class="text-danger">
@@ -45,14 +46,16 @@
 
 
                             <b-dropdown-item
+                                :dusk="`edit-order-${scope.item.id}`"
                                 :to="{name:'orders.edit', params: {id: scope.item.id}}"
                                 v-if="$store.getters.userIsAdmin">
                                 <span>
-                                  <i class="fas fa-trash "></i> Edit
+                                  <i class="fas fa-trash"></i> Edit
                                 </span>
                             </b-dropdown-item>
 
                             <b-dropdown-item
+                                :dusk="`view-order-${scope.item.id}`"
                                 :to="{name:'orders.show', params: {id: scope.item.id}}"
                                 v-if="!$store.getters.userIsAdmin">
                                 <span>

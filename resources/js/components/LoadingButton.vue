@@ -6,6 +6,7 @@
     v-bind="$attrs"
     v-on="$listeners"
     data-loading-button
+    dusk="submit-checkout"
   >
     <b-spinner small type="grow" v-if="isLoading" data-loading-icon></b-spinner>
     <span v-if="isLoading">{{loadingText}}</span>

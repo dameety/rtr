@@ -17,7 +17,7 @@
                     <div class="d-flex align-items-end justify-content-between">
                         <p class="text-muted">{{meal.price | currency}}</p>
 
-                        <button type="button" class="btn btn-dark btn-sm" @click.prevent="addToCart()">
+                        <button type="button" dusk="add-to-cart-button" class="btn btn-dark btn-sm" @click.prevent="addToCart()">
                             Add To Cart
                         </button>
                     </div>
@@ -53,6 +53,10 @@
         }
         .col-md-9 {
             padding-left: 0;
+        }
+
+        button {
+            text-transform: capitalize;
         }
     }
 </style>

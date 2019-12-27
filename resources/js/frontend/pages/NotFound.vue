@@ -1,25 +1,26 @@
 <template>
-  <div class="uk-container uk-flex">
+  <div class="container">
 
-    <img
-      src="/assets/images/notfound.svg"
-      class="uk-flex-center"
-    >
+    <div class="row">
+      <img src="/images/notfound.svg">
+    </div>
 
   </div>
 </template>
 
 <script>
-export default {
-  name: "NotFound.vue"
-};
+
+  export default {
+    name: "NotFound.vue"
+  }
+
 </script>
 
 
 <style scoped>
-img {
-  height: 300px;
-  width: auto;
-  margin: 50px auto;
-}
+  img {
+    height: 400px;
+    width: auto;
+    margin: auto;
+  }
 </style>

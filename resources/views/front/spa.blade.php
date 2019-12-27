@@ -26,7 +26,7 @@
     <script src="{{asset('front/vendor/bootstrap/bootstrap.min.js')}}"></script>
     <script src="{{asset('front/vendor/headroom/headroom.min.js')}}"></script>
     <script src="{{asset('front/js/argon.js?v=1.1.0')}}"></script>
-    <script src="{{ asset('front/js/vue-app.js') }}" defer></script>
+    <script src="{{ asset('front/js/vue-app.js') }}"></script>
 </body>
 
 </html>

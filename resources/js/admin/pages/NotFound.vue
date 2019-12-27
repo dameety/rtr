@@ -1,24 +1,17 @@
 <template>
     <div class="container">
-        <div class="container-fluid dashboard-content">
 
-            <div class="row">
-                <img src="/assets/images/notfound.svg">
-            </div>
-
+        <div class="row">
+            <img src="/images/notfound.svg">
         </div>
+
     </div>
 </template>
 
 <script>
 
     export default {
-        name: "NotFound.vue",
-
-        methods: {
-
-
-        }
+        name: "NotFound.vue"
     }
 
 </script>

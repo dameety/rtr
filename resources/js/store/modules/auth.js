@@ -35,8 +35,8 @@ const getters = {
     }
   },
 
-  userIsAuthenticated: state => {
-    return state["user"];
+  userIsAuthenticated: (state, x) => {
+    return x.currentAuthUser
   }
 };
 

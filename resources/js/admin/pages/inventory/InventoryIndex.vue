@@ -35,10 +35,11 @@
                             class="dropdown-ellipses">
 
                             <template slot="button-content">
-                                <i class="text-muted fas fa-ellipsis-v"></i>
+                                <i class="text-muted fas fa-ellipsis-v" dusk="action-dropdown"></i>
                             </template>
 
                             <b-dropdown-item
+                                :dusk="`delete-meal-${scope.item.id}`"
                                 @click="removeItem(scope.item)">
                                 <span class="text-danger">
                                   <i class="fas fa-trash text-danger"></i> Delete
@@ -46,6 +47,7 @@
                             </b-dropdown-item>
 
                             <b-dropdown-item
+                                :dusk="`edit-meal-${scope.item.id}`"
                                 :to="{name:'inventory.edit', params: {id: scope.item.id}}">
                                 <span>
                                   <i class="fas fa-trash "></i> Edit

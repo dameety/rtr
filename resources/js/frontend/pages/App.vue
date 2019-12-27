@@ -81,4 +81,7 @@ export default {
 
 <style lang="scss" scoped>
 
+    button {
+        text-transform: capitalize;
+    }
 </style>

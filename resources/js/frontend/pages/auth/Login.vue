@@ -26,7 +26,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Email" v-model="form_data.email" type="email">
+                                            <input class="form-control" placeholder="Email" name="email" v-model="form_data.email" type="email">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -34,7 +34,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                             </div>
-                                            <input class="form-control" placeholder="Password" v-model="form_data.password" type="password">
+                                            <input class="form-control" placeholder="Password" name="password" v-model="form_data.password" type="password">
                                         </div>
                                     </div>
 
@@ -114,5 +114,9 @@
 </script>
 
 <style scoped>
+
+    button {
+        text-transform: capitalize;
+    }
 
 </style>

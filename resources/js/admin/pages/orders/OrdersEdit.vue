@@ -115,7 +115,7 @@
                                     </div>
 
                                     <div class="col-8">
-                                        <b-form-select size="sm"  v-model="selectedDriverId" :options="drivers"></b-form-select>
+                                        <b-form-select size="sm" name="drivers" v-model="selectedDriverId" :options="drivers"></b-form-select>
                                     </div>
                                 </div>
 
@@ -124,13 +124,12 @@
                                         Status
                                     </div>
                                     <div class="col-8">
-
                                         <b-form-group>
                                             <b-form-radio-group
-                                                    id="radio-group-1"
-                                                    v-model="order.status"
-                                                    :options="statusOptions"
-                                                    name="order.status"
+                                                id="radio-group-1"
+                                                v-model="order.status"
+                                                :options="statusOptions"
+                                                name="status"
                                             ></b-form-radio-group>
                                         </b-form-group>
                                     </div>
@@ -138,7 +137,9 @@
 
                                 <div class="row">
                                     <div class="col">
-                                        <b-button @click.prevnet="updateOrder()">
+                                        <b-button
+                                            dusk="update-order"
+                                            @click.prevnet="updateOrder()">
                                             <i class="fas fa-trash "></i> Update
                                         </b-button>
                                     </div>
